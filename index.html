@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-86ddc6d813b8c42feeb678290bfa14e3.ico" />
+    <title>PF-Twoslashfour</title>
+    <!--------------- 기본 css --------------->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font.css">
+
+    <!--------------- main css --------------->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--------------- 반응형 css --------------->
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("header .wrap .info a").click(function(){
+                $("#nav").toggleClass("navSlide");
+
+                return false;
+            });
+
+            $("#nav .wrap > a").click(function(){
+                $("#nav").removeClass("navSlide");
+
+                return false;
+            });
+        });
+
+    </script>
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('.sideSlide').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1
+            });
+
+            $('.sideSlide2').slick({
+                dots: false,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                centerMode: false,
+                variableWidth: true
+                // variableWidth: true 로 한 다음 슬릭적용 되어 있는 li 상위 div에 width 총 값 지정
+                // 그 다음 각 li 의 width 지정
+            });
+
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <!--------------- 헤더 영역 --------------->
+
+    <header class="">
+        <div class="wrap flex">
+            <h1 class="h1 hide"><a href="#">Twoslashfour</a></h1>
+            <div class="logo">
+                <img src="img/logo_black.svg" alt="logo_black">
+            </div>
+            <div class="info">
+                <a href=""><img src="img/mypage.svg" alt="mypage"></a>
+                <a href=""><img src="img/cart.svg" alt="cart"></a>
+                <a href=""><img src="img/menu.svg" alt="menu"></a>
+            </div>
+        </div>
+    </header>
+
+
+    <!--------------- 타이틀 영역 --------------->
+
+    <div id="title" class="">
+        <div class="wrap">
+                <iframe  src="https://player.vimeo.com/video/898291963?h=2d5292620c&badge=0&title=0&byline=0&autoplay=1&controls=0&loop=1&muted=true&quality=1080p" frameborder="0">
+                </iframe>
+        </div>
+    </div>
+
+
+    <!--------------- main 영역 --------------->
+
+    <main class="">
+
+        <!--------------- products --------------->
+        <section id="products" class="">
+            <div class="wrap">
+                <div class="ptext">
+                    <h2 class="textH">WHAT’S NEW!</h2>
+                    <p class="">클릭 한번으로 쉽고 빠르게, <br>
+                        지금껏 보지 못했던 새로운 컬러&텍스처를 통해 매일 다른 룩을 즐겨보세요!</p>
+                    <a href="" class="btn h6">SHOP ALL</a>
+                </div>
+                <div class="plist">
+                    <ul class="sideSlide">
+                        <!-- slick 적용하고 싶은 부모에게 적용 -->
+                        <!-- slick 애니 적용 시 안에 flex가 있어서 따로 주지 않아도 됨 -->
+                        <!-- 만약 작업 시 flex를 줬다면 slick 할 때 지우기 -->
+                        <li>
+                            <a href="">
+                                <img src="img/스트로빙페이스큐브화이트.jpg" alt="스트로빙 페이스 큐브 화이트">
+                            </a>
+                            <div class="pinfo">
+                                <a href="">스트로빙 페이스 큐브 화이트</a>
+                                <p>28,000원</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/스트로빙페이스큐브퍼플.jpg" alt="스트로빙페이스큐브퍼플">
+                            </a>
+                            <div class="pinfo">
+                                <a href="">스트로빙페이스큐브퍼플</a>
+                                <p>28,000원</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/글레이즈립체인저누블랙체리.jpg" alt="글레이즈립체인저누블랙체리">
+                            </a>
+                            <div class="pinfo">
+                                <a href="">글레이즈립체인저누블랙체리</a>
+                                <p>27,000원</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/글레이즈립체인저누베리.jpg" alt="글레이즈립체이저누베리">
+                            </a>
+                            <div class="pinfo">
+                                <a href="">글레이즈립체인저누베리</a>
+                                <p>27,000원</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/스컬프트립쉐이퍼인살몬.jpg" alt="스컬프트립쉐이퍼인살몬">
+                            </a>
+                            <div class="pinfo">
+                                <a href="">스컬프트립쉐이퍼인살몬</a>
+                                <p>22,000원</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swipeHover"></div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!--------------- risabe --------------->
+        <section id="risabe" class="">
+            <div class="wrap">
+                <div class="rtext">
+                    <h2 class="textH">TWO SLASH FOUR<br>by RISABAE</h2>
+                    <p class="">투슬래시포는 일상 속 새로운 뷰티 루틴을 제시하고<br>
+                        원하는 판타지를 자유롭게 표현하도록 돕는<br>이사배의 Co-Creative Beauty Brand입니다.</p>
+                    <a href="" class="btn h6">MORE INFO</a>
+                </div>
+                <div class="rimg">
+                    <ul class="rilist sideSlide2">
+                        <!-- data-slick='{"slidesToShow": 3, "slidesToScroll": 2}' -->
+                        <li class="risabe1 rimg50 bgimgsize"></li>
+                        
+                            <li class="risabe2 rimg25">
+                                <div class="img1 bgimgsize"></div>
+                                <div class="img2 bgimgsize"></div>
+                            </li>
+                         
+
+                        <li class="risabe3 rimg50 bgimgsize"></li>
+                        
+                            <li class="risabe4 rimg25">
+                                <div class="img3 bgimgsize"></div>
+                                <div class="img4 bgimgsize"></div>
+                            </li>
+                        
+                    </ul>
+                    <div class="swipeHover"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--------------- contents --------------->
+        <section id="contents" class="">
+            <div class="wrap flex">
+                <div class="context">
+                    <h2 class="textH">QUICK & EASY HOW-TO</h2>
+                    <p class="">이사배의 노하우를 담은 지금 가장 쉽고 빠른 HOW-TO, <br>
+                        지금 바로 만나보세요!</p>
+                    <a href="" class="btn h6">MORE CONTENTS</a>
+                </div>
+
+                <div class="convideo flex">
+                    <div class="vimg1 conbgimg">
+                        <a class="playbtn1" href=""></a>
+                    </div>
+                    <div class="vimg2 conbgimg">
+                        <a class="playbtn2" href=""></a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <!--------------- picprod --------------->
+        <section id="picprod" class="">
+            <div class="wrap">
+                <div class="ulwrap">
+                    <ul class="prodlist flex">
+                        <li class="prodsub1 flex column">
+                            <div class="prod1">
+                                <a class="" href=""></a>
+                            </div>
+                            <div class="prod2">
+                                <a class="" href=""></a>
+                            </div>
+                            <div class="null">
+                            </div>
+                        </li>
+                        <li class="prodsub2 flex column">
+                            <div class="prod3">
+                            </div>
+                            <div class="null">
+                            </div>
+                            <div class="prod4">
+                                <a class="" href=""></a>
+                            </div>
+                        </li>
+                        <li class="prodsub3 flex column">
+                            <div class="null">
+                            </div>
+                            <div class="prod5">
+                                <a class="" href=""></a>
+                            </div>
+                            <div class="null">
+                            </div>
+                        </li>
+                        <li class="prodsub4 flex column">
+                            <div class="prod6">
+                                <a class="" href=""></a>
+                            </div>
+                            <div class="prod7">
+                            </div>
+                            <div class="prod8">
+                                <a class="" href=""></a>
+                            </div>
+                        </li>
+                        <li class="prodsub5 flex column">
+                            <div class="null">
+                            </div>
+                            <div class="prod9">
+                                <a class="" href=""></a>
+                            </div>
+                            <div class="null">
+                            </div>
+                        </li>
+                        <li class="prodsub6 flex column">
+                            <div class="prod10">
+                                <a class="" href=""></a>
+                            </div>
+                            <div class="null">
+                            </div>
+                            <div class="null">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+
+
+        <!--------------- nav --------------->
+    <div id="nav">
+        <div class="wrap">
+            <div class="row1">
+                <div class="c1 rowP"><a class="upper" href="">about us</a></div>
+                <div class="c2 rowP">
+                    <a class="upper" href="\">shop</a>
+                    <ul class="upper">
+                        <li><a href="">ALL</a></li>
+                        <li><a href="">Project 01</a></li>
+                        <li><a href="">Project 02</a></li>
+                    </ul>
+                </div>
+                <div class="c3">
+                    <div class="rowP upper">
+                        <a href="">CONTENTS</a>
+                        <br>
+                        <a href="">REVIEW</a>
+                    </div>
+                    <div class="import">
+                        <a href="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row2">
+                <div class="c1">
+                    <ul>
+                        <li><a href="">EVENT</a></li>
+                        <li><a href="">NOTICE</a></li>
+                        <li><a href="">Q&A</a></li>
+                    </ul>
+                </div>
+                <div class="c2">
+                    <ul>
+                        <li><a href="">LOGIN</a></li>
+                        <li><a href="">MY PAGE</a></li>
+                        <li><a href="">ORDER</a></li>
+                    </ul>
+                    <ul class="sns">
+                        <li>
+                            <a href="https://www.instagram.com/twoslashfour/" target="_blank">
+                                <img src="img/instagram.svg" alt="투슬래시포인스타">
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://pf.kakao.com/_xhbpBxj" target="_blank">
+                                <img src="img/kakao.svg" alt="투슬래시포카카오톡">
+                                Kakao
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/@RISABAE" target="_blank">
+                                <img src="img/youtube.svg" alt="이사배유튜브">
+                                Youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c3">
+                    <ul>
+                        <li>search</li>
+                        <li>
+                            <label title="What You Wanna See?"for="searchInput">
+                                <input id="searchInput" type="text" placeholder="What You Wanna See?">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="close" href="#"></a>
+        </div>
+    </div>
+
+    <!--------------- 하단 영역 --------------->
+
+    <footer>
+        <div class="wrap">
+            <div class="footT flex ">
+
+                <div class="left">
+                    <div class="support">
+                        <h2 class="upper">Support</h2>
+                        <div>
+                            <ul>
+                                <li>MON – FRI 1PM – 5PM
+                                    <br>
+                                    SAT. SUN. HOLIDAY OFF
+                                </li>
+                                <li>
+                                    <a href="">070-8094-0424</a>
+                                </li>
+                                <li>
+                                    <a href="">tofor@twoslashfour.com</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="">NOTICE</a></li>
+                                <li><a href="">Q&A</a></li>
+                                <li><a href="">SHIPPING & RETURN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="social">
+                        <h3 class="upper">Follow Us</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/twoslashfour/" target="_blank"><img src="img/instagram.svg" alt="투슬래시포인스타">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/@RISABAE" target="_blank"><img src="img/youtube.svg" alt="이사배유튜브">Youtube</a></li>
+                            <li><a href="https://pf.kakao.com/_xhbpBxj" target="_blank"><img src="img/kakao.svg" alt="투슬래시포카카오톡">Kakao</a></li>
+                        </ul>
+                    </div>
+                    <div class="fInfo">
+                        <ul>
+                            <li>(주)투슬래시포 | 사업자등록번호: 611-87-02264 | 대표자: 이사배 
+                                <br>
+                                04386 서울특별시 용산구 한강대로 100 (한강로2가) 21층 | 대표번호: 070-8094-0424 | 이메일: 
+                                <a class="upper" href="">tofor@twoslashfour.com</a>
+                            </li>
+                            <li>개인정보 보호 책임자: 이사배 | 통신판매업신고: 제 2023-서울용산-0128 호</li>
+                        </ul>
+                        
+                        <p class="copy">ⓒ 2023. TWO SLASH FOUR</p>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="fimg">
+                        <!-- <img src="img/main_footer.jpg" alt="main_footer.jpg"> -->
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footB flex ">
+                <img src="img/logo_black.svg" alt="logo">
+                <!-- hover하면 logo_outline.svg 로 변경 -->
+            </div>
+
+        </div>
+        <a class="top" href="">
+            <h3 class="hide">top</h3>
+        </a>
+    </footer>
+
+
+
+</body>
+</html>

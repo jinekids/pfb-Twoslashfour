@@ -1,0 +1,17 @@
+/* body{
+    font-family: 'Noto Sans KR', sans-serif;
+} */
+@font-face {
+  font-family: 'Jam Grotesque';
+  src:url('../font/JamGrotesque-Regular.woff') format('woff')
+  /* 이런식으로 weight를 지정해서 사용할 수도 있다!*/
+
+}
+
+body{
+  /* font-family: 'Jam Grotesque', sans-serif; */
+  font:0.75em 'Jam Grotesque','Noto Sans KR',Verdana,Dotum,AppleGothic,sans-serif;
+  min-width:auto;
+  font-weight:400;
+  color:#000;
+}

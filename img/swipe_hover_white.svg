@@ -1,0 +1,17 @@
+<svg id="구성_요소_62_17" data-name="구성 요소 62 – 17" xmlns="http://www.w3.org/2000/svg" width="224" height="88" viewBox="0 0 224 88">
+  <g id="그룹_267" data-name="그룹 267" transform="translate(-848 -3448)">
+    <!--g id="그룹_266" data-name="그룹 266" transform="translate(848 3448)">
+      <g id="사각형_444" data-name="사각형 444" fill="none" stroke="gray" stroke-width="1">
+        <rect width="224" height="88" rx="20" stroke="none"/>
+        <rect x="0.5" y="0.5" width="223" height="87" rx="19.5" fill="none"/>
+      </g>
+    </g-->
+    <!--line id="선_135" data-name="선 135" x1="8" y1="8" transform="translate(1048 3484)" fill="none" stroke="gray" stroke-width="1"/>
+    <line id="선_193" data-name="선 193" x1="8" y2="8" transform="translate(1048 3492)" fill="none" stroke="gray" stroke-width="1"/-->
+    <line id="선_135" data-name="선 135" x1="8" y1="8" transform="translate(1046 3484)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_193" data-name="선 193" x1="8" y2="8" transform="translate(1046 3492)" fill="none" stroke="#fff" stroke-width="1"/>
+
+    <line id="선_137" data-name="선 137" y1="8" x2="8" transform="translate(864 3484)" fill="none" stroke="#fff" stroke-width="1"/>
+    <line id="선_194" data-name="선 194" x2="8" y2="8" transform="translate(864 3492)" fill="none" stroke="#fff" stroke-width="1"/>
+  </g>
+</svg>
