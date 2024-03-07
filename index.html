@@ -21,6 +21,8 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
+
+            //nav 애니
             $("header .wrap .info a").click(function(){
                 $("#nav").toggleClass("navSlide");
 
@@ -32,6 +34,18 @@
 
                 return false;
             });
+
+            //swipe 애니
+            $("section#products .wrap .plist .swipeHover,section#products .wrap .plist").click(function(){
+                $("section#products .wrap .plist .swipeHover").addClass("swipeNone");
+                return false;
+            });
+
+            $("section#risabe .wrap .rimg .swipeHover,section#risabe .wrap .rimg").click(function(){
+                $("section#risabe .wrap .rimg .swipeHover").addClass("swipeNone");
+                return false;
+            });
+
         });
 
     </script>
@@ -48,7 +62,19 @@
                 infinite: false,
                 speed: 300,
                 slidesToShow: 4,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                responsive:[
+                    {
+                    breakpoint: 1025,
+                    settings: {
+                        dots: false,
+                        infinite: false,
+                        speed: 300,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]   
             });
 
             $('.sideSlide2').slick({
@@ -93,8 +119,9 @@
 
     <div id="title" class="">
         <div class="wrap">
-                <iframe  src="https://player.vimeo.com/video/898291963?h=2d5292620c&badge=0&title=0&byline=0&autoplay=1&controls=0&loop=1&muted=true&quality=1080p" frameborder="0">
+                <iframe class="pcTitle" src="https://player.vimeo.com/video/898291963?h=2d5292620c&badge=0&title=0&byline=0&autoplay=1&controls=0&loop=1&muted=true&quality=1080p" frameborder="0">
                 </iframe>
+                <div class="mobileTitle"></div>
         </div>
     </div>
 
@@ -114,7 +141,7 @@
                 </div>
                 <div class="plist">
                     <ul class="sideSlide">
-                        <!-- slick 적용하고 싶은 부모에게 적용 -->
+                        <!--  / slick 적용하고 싶은 부모에게 적용 -->
                         <!-- slick 애니 적용 시 안에 flex가 있어서 따로 주지 않아도 됨 -->
                         <!-- 만약 작업 시 flex를 줬다면 slick 할 때 지우기 -->
                         <li>
@@ -165,6 +192,8 @@
                     </ul>
                     <div class="swipeHover"></div>
                 </div>
+
+                <div class="moblieProdImg"></div>
 
 
             </div>
