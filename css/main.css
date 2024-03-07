@@ -231,6 +231,9 @@ input#searchInput::placeholder {
   min-width:calc(100vw + 50vh);
   min-height:calc(50vw + 100vh);
 }
+#title .wrap .mobileTitle{
+  display: none;
+}
 
 
 
@@ -331,7 +334,12 @@ section#products .wrap .plist .swipeHover:before{
   background-repeat:no-repeat;
   margin:auto;
 }
-
+.swipeNone{
+  display: none;
+}
+section#products .wrap .moblieProdImg{
+  display: none;
+}
 
 /* --------- risabe --------- */
 section#risabe {

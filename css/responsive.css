@@ -5,9 +5,134 @@
 
 
 /* ---------------------------------------------------- */
-@media screen and (max-width:1200px){
-
+@media screen and (max-width:1024px){
+  body{
+    overflow-x: hidden;
+  }
+  /*  header  */
+  header .wrap .logo img{
+    display: none;
+  }
+  header .wrap .info{
+    background-color: transparent;
+    top: 17.5px;
+    width: 40px;
+    padding: 0;
+    height: auto;
+  }
+  header .wrap .info a:not(:nth-child(2)){  
+    display: none;
+  }
+  header .wrap .info a:nth-child(2){
+    width: 40px;
+    height: 100%;
+  }
+  header .wrap .info a img{
+    width: 38px;
+  }
   
+  /* title */
+  #title{
+    height: 100vh;
+  }
+  #title .wrap{
+
+    height: 100%;
+  }
+  #title .wrap iframe{
+    display: none;
+  }
+  #title .wrap .mobileTitle{
+    background-image: url(../img/main_video1229.gif);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    background-position: 50% 50%;
+  }
+
+  /*  products  */
+  section#products{
+    width: 100%;
+    min-height: 105vw;
+  }
+  section#products .wrap{
+
+    width: 100%;
+    /*! height: 100%; */
+  }
+  section#products .wrap .ptext{
+
+  }
+  section#products .wrap .ptext h2{
+
+  }
+  section#products .wrap .ptext p{
+
+  }
+  section#products .wrap .plist{
+
+  }
+  section#products .wrap .plist ul{
+
+    display: flex;
+    width: 100%;
+  }
+  section#products .wrap .plist ul li{
+
+  }
+  section#products .wrap .plist ul li a{
+
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  section#products .wrap .plist ul li a img{
+
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  section#products .wrap .plist ul li:nth-child(2)::before{
+    height: 3.641vw;
+    background-repeat: no-repeat;
+    left: 3.846vw;
+    top: 2.564vw;
+    right: 3.846vw;
+  }
+  section#products .wrap .plist ul li .pinfo{
+    padding: 3.846vw 3.846vw 10.256vw;
+    padding-bottom: 0;
+  }
+  section#products .wrap .plist ul li .pinfo a{
+
+    font-size: 3.24vw;
+  }
+  section#products .wrap .plist ul li .pinfo p{
+
+    font-size: 3.24vw;
+  }
+  .swipeHover{
+
+    background-size: 124px 48px;
+    width: 125px;
+    height: 50px;
+  }
+  section#products .wrap .plist .swipeHover:before{
+
+    font-size: 15px;
+  }
+  section#products .wrap .moblieProdImg{
+    background-image: url(../img/m_main_prd11.jpg);
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-top: 78.97%;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
 }
 
 
@@ -16,6 +141,16 @@
 
 /* ---------------------------------------------------- */
 @media screen and (max-width:768px){
+
+  /*  products  */
+  section#products .wrap .plist ul li .pinfo p{
+    letter-spacing: -0.15vw;
+  }
+}
+
+
+/* ---------------------------------------------------- */
+@media screen and (max-width:450px){
 
   
 }
