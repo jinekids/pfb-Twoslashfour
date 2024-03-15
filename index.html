@@ -50,6 +50,58 @@
 
     </script>
 
+
+    <!-- box 스크롤 -->
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                    
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 800, complete: function () {
+                        }
+                    });
+                });
+            });
+            $("main>section").unwrap();
+            $("section:not('#portfolio')").css("height","100%");
+            $("section#contact").css("height","500px");
+        }
+    </script>
+
+
+
     <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
@@ -112,12 +164,89 @@
                 <a href=""><img src="img/menu.svg" alt="menu"></a>
             </div>
         </div>
+        
+
+        <!--------------- nav --------------->
+        <div id="nav">
+            <div class="wrap">
+                <div class="row1">
+                    <div class="c1 rowP"><a class="upper" href="">about us</a></div>
+                    <div class="c2 rowP">
+                        <a class="upper" href="\">shop</a>
+                        <ul class="upper">
+                            <li><a href="">ALL</a></li>
+                            <li><a href="">Project 01</a></li>
+                            <li><a href="">Project 02</a></li>
+                        </ul>
+                    </div>
+                    <div class="c3">
+                        <div class="rowP upper">
+                            <a href="">CONTENTS</a>
+                            <br>
+                            <a href="">REVIEW</a>
+                        </div>
+                        <div class="import">
+                            <a href="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row2">
+                    <div class="c1">
+                        <ul>
+                            <li><a href="">EVENT</a></li>
+                            <li><a href="">NOTICE</a></li>
+                            <li><a href="">Q&A</a></li>
+                        </ul>
+                    </div>
+                    <div class="c2">
+                        <ul>
+                            <li><a href="">LOGIN</a></li>
+                            <li><a href="">MY PAGE</a></li>
+                            <li><a href="">ORDER</a></li>
+                        </ul>
+                        <ul class="sns">
+                            <li>
+                                <a href="https://www.instagram.com/twoslashfour/" target="_blank">
+                                    <img src="img/instagram.svg" alt="투슬래시포인스타">
+                                    Instagram
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://pf.kakao.com/_xhbpBxj" target="_blank">
+                                    <img src="img/kakao.svg" alt="투슬래시포카카오톡">
+                                    Kakao
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@RISABAE" target="_blank">
+                                    <img src="img/youtube.svg" alt="이사배유튜브">
+                                    Youtube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="c3">
+                        <ul>
+                            <li>search</li>
+                            <li>
+                                <label title="What You Wanna See?"for="searchInput">
+                                    <input id="searchInput" type="text" placeholder="What You Wanna See?">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="close" href="#"></a>
+            </div>
+        </div>
     </header>
 
 
     <!--------------- 타이틀 영역 --------------->
 
-    <div id="title" class="">
+    <div id="title" class="box">
         <div class="wrap">
                 <iframe class="pcTitle" src="https://player.vimeo.com/video/898291963?h=2d5292620c&badge=0&title=0&byline=0&autoplay=1&controls=0&loop=1&muted=true&quality=1080p" frameborder="0">
                 </iframe>
@@ -131,7 +260,7 @@
     <main class="">
 
         <!--------------- products --------------->
-        <section id="products" class="">
+        <section id="products" class="box">
             <div class="wrap">
                 <div class="ptext">
                     <h2 class="textH">WHAT’S NEW!</h2>
@@ -200,7 +329,7 @@
         </section>
 
         <!--------------- risabe --------------->
-        <section id="risabe" class="">
+        <section id="risabe" class="box">
             <div class="wrap">
                 <div class="rtext">
                     <h2 class="textH">TWO SLASH FOUR<br>by RISABAE</h2>
@@ -234,7 +363,7 @@
 
 
         <!--------------- contents --------------->
-        <section id="contents" class="">
+        <section id="contents" class="box">
             <div class="wrap flex">
                 <div class="context">
                     <h2 class="textH">QUICK & EASY HOW-TO</h2>
@@ -257,7 +386,7 @@
 
 
         <!--------------- picprod --------------->
-        <section id="picprod" class="">
+        <section id="picprod" class="box">
             <div class="wrap">
                 <div class="ulwrap">
                     <ul class="prodlist flex">
@@ -327,85 +456,11 @@
 
 
 
-        <!--------------- nav --------------->
-    <div id="nav">
-        <div class="wrap">
-            <div class="row1">
-                <div class="c1 rowP"><a class="upper" href="">about us</a></div>
-                <div class="c2 rowP">
-                    <a class="upper" href="\">shop</a>
-                    <ul class="upper">
-                        <li><a href="">ALL</a></li>
-                        <li><a href="">Project 01</a></li>
-                        <li><a href="">Project 02</a></li>
-                    </ul>
-                </div>
-                <div class="c3">
-                    <div class="rowP upper">
-                        <a href="">CONTENTS</a>
-                        <br>
-                        <a href="">REVIEW</a>
-                    </div>
-                    <div class="import">
-                        <a href="">
-                        </a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row2">
-                <div class="c1">
-                    <ul>
-                        <li><a href="">EVENT</a></li>
-                        <li><a href="">NOTICE</a></li>
-                        <li><a href="">Q&A</a></li>
-                    </ul>
-                </div>
-                <div class="c2">
-                    <ul>
-                        <li><a href="">LOGIN</a></li>
-                        <li><a href="">MY PAGE</a></li>
-                        <li><a href="">ORDER</a></li>
-                    </ul>
-                    <ul class="sns">
-                        <li>
-                            <a href="https://www.instagram.com/twoslashfour/" target="_blank">
-                                <img src="img/instagram.svg" alt="투슬래시포인스타">
-                                Instagram
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://pf.kakao.com/_xhbpBxj" target="_blank">
-                                <img src="img/kakao.svg" alt="투슬래시포카카오톡">
-                                Kakao
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/@RISABAE" target="_blank">
-                                <img src="img/youtube.svg" alt="이사배유튜브">
-                                Youtube
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="c3">
-                    <ul>
-                        <li>search</li>
-                        <li>
-                            <label title="What You Wanna See?"for="searchInput">
-                                <input id="searchInput" type="text" placeholder="What You Wanna See?">
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <a class="close" href="#"></a>
-        </div>
-    </div>
 
     <!--------------- 하단 영역 --------------->
 
-    <footer>
+    <footer class="box">
         <div class="wrap">
             <div class="footT flex ">
 
